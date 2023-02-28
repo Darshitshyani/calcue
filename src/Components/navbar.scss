@@ -1,0 +1,131 @@
+.absulates {
+  position: absolute;
+  min-height: 138px;
+  width: 100%;
+  z-index: -1;
+  background: #f9f9fe;
+  border-radius: 0px 0px 56px 56px;
+}
+.nav-body {
+  display: flex;
+  align-items: center;
+  min-height: 138px;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: calc(1440px - 13rem);
+
+  .img_div {
+    width: 136px;
+    height: 37px;
+    aspect-ratio: 1/1;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .right_nav_div {
+    display: flex;
+    align-items: center;
+    gap: 51px;
+    .nav-links {
+      display: flex;
+      height: 138px;
+      justify-content: center;
+      gap: 38px;
+      align-items: center;
+      .get-access,
+      .login {
+        display: none;
+      }
+      a {
+        cursor: pointer;
+        // font-family: "Inter";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #3d3d3d;
+        &.active {
+          color: #0963a1;
+          font-weight: 700;
+        }
+      }
+
+      // a:hover {
+      //   color: #0963a1;
+      //   font-weight: 700;
+      // }
+    }
+    .btn_div {
+      display: flex;
+      gap: 1rem;
+      button {
+        border-radius: 30.9879px;
+        // font-family: "Inter";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+      }
+      .lg-btn {
+        width: 96.85px;
+        height: 43.95px;
+        border: 1px solid #0d6aa0;
+        filter: drop-shadow(3px 17px 33px rgba(14, 107, 161, 0.14));
+        background-color: #faf9fe;
+        color: #0d6aa0;
+      }
+      .access-btn {
+        border: 0;
+        width: 151.62px;
+        height: 43.95px;
+        background: #0d6aa0;
+        box-shadow: 3px 17px 33px rgba(14, 107, 161, 0.14);
+        color: #ffffff;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1439px) {
+  .nav-body {
+    max-width: calc(1366px - 13rem) !important;
+  }
+}
+
+@media screen and (max-width: 1366px) {
+  .nav-body {
+    margin: 0 a;
+    padding: 0 1rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-body {
+    padding: 0 3rem;
+    .right_nav_div {
+      gap: 45px;
+      .nav-links {
+        height: auto;
+        width: auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .nav-body {
+    .right_nav_div {
+      .nav-links {
+        .get-access,
+        .login {
+          display: block;
+        }
+      }
+      .btn_div {
+        display: none;
+      }
+    }
+  }
+}
